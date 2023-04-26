@@ -51,5 +51,5 @@ public class ValidacionServiceImp implements ValidacionService {
         return validacionrepositorio.save(objvalidacion);
 
     }
-
+    
 }

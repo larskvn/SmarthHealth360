@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Data
 
 
-@Entity(name = "validacion")
+@Entity(name = "ValidacionEntity")
 @Table(name = "validacion")
 public class ValidacionEntity  implements Serializable {
     private static final long serialVersionUID=1L;
