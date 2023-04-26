@@ -36,6 +36,9 @@ public class MedicoEntity implements Serializable{
     @NotNull
     @Column(name = "apellido")
     private String apellido;
+     
+    @Column(name = "photo")
+    private String photo;
 
     @NotNull
     @Column(name = "contrasena")
