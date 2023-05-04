@@ -42,8 +42,8 @@ public class AdministradorEntity implements Serializable{
 
 
     @ManyToOne
-    @JoinColumn(name = "rol_id", nullable = false)
-    private String rol_id;
+    @JoinColumn(name = " rol_id", nullable = false)
+    private RolEntity rol_id;
 
 
     @Column(name = "estado")

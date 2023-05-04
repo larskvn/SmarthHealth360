@@ -5,12 +5,13 @@ import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.smarthealth.entity.LoginEntity;
 import com.smarthealth.repository.LoginRepository;
 
+@Service
 public class LoginServiceImp implements LoginService {
-
 
     @Autowired
     private LoginRepository loginrepositorio;
@@ -28,7 +29,6 @@ public class LoginServiceImp implements LoginService {
     @Override
     public Optional<LoginEntity> findById(long Id) {
         return loginrepositorio.findById(Id);
-
     }
 
     @Override
@@ -38,9 +38,9 @@ public class LoginServiceImp implements LoginService {
 
     @Override
     public LoginEntity update(LoginEntity l) {
-       LoginEntity objlogin = loginrepositorio.getById(l.getId_usuario());
-       BeanUtils.copyProperties(l, objlogin);
-       return loginrepositorio.save(objlogin);
+        LoginEntity objlogin = loginrepositorio.getById(l.getId_usuario());
+        BeanUtils.copyProperties(l, objlogin);
+        return loginrepositorio.save(objlogin);
     }
 
     @Override
@@ -49,5 +49,5 @@ public class LoginServiceImp implements LoginService {
         objlogin.setEstado(false);
         return loginrepositorio.save(objlogin);
     }
-    
+
 }

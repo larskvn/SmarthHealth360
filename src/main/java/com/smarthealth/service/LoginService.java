@@ -7,11 +7,13 @@ import com.smarthealth.entity.LoginEntity;
 
 public interface LoginService {
 
+
+
     public List<LoginEntity> findAll();
 
     public List<LoginEntity> findAllCustom();
 
-    public Optional<LoginEntity> findById( long Id);
+    public Optional<LoginEntity> findById(long Id);
 
     public LoginEntity add(LoginEntity l);
 
